@@ -15,9 +15,9 @@
             Materiais
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-	    <li><a class="dropdown-item" href="#">Pulpito</a></li>
-	    <li><a class="dropdown-item" href="#">Mesa</a></li>
-	    <li><a class="dropdown-item" href="#">{{projetor}}</a></li>
+	    <li><a class="dropdown-item" (click)="aba='pulpitos'">Pulpito</a></li>
+	    <li><a class="dropdown-item" (click)="aba='banners'">Banners</a></li>
+	    <li><a class="dropdown-item" (click)="aba='projetores'">Projetores</a></li>
           </ul>
         </li>
       </ul>
@@ -26,5 +26,11 @@
         <button class="btn btn-outline-success" type="submit">Search</button>
       </form>
     </div>
-  </div>
+ </div>
 </nav>
+<div class="conteiner" [ngSwitch]="aba">
+	<app-pulpitos *ngSwitchCase="'pulpitos'"></app-pulpitos>
+	<app-projetores *ngSwitchCase="'projetores'"></app-projetores>
+	<app-banners *ngSwitchCase="'banners'"></app-banners>
+</div>
+ 
