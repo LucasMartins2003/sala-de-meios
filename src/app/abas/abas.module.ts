@@ -1,10 +1,10 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { HistoricoModule } from '../historico/historico.module';
 
 import { PulpitosComponent } from './pulpitos/pulpitos.component';
 import { ProjetoresComponent } from './projetores/projetores.component';
 import { BannersComponent } from './banners/banners.component';
+import { HistoricoComponent } from './historico/historico.component';
 
 
 
@@ -12,11 +12,11 @@ import { BannersComponent } from './banners/banners.component';
   declarations: [
     PulpitosComponent,
     ProjetoresComponent,
-    BannersComponent
+    BannersComponent,
+    HistoricoComponent
   ],
   imports: [
-    CommonModule,
-    HistoricoModule
+    CommonModule
   ],
   exports: [
     PulpitosComponent,
